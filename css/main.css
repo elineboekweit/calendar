@@ -1,0 +1,96 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+body {
+    margin: 0 auto;
+    width: 50%;
+    font-family: Open Sans, Verdana, sans-serif;
+    font-size: 12pt;
+}
+#add {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+#birthday {
+    width: 50%;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+#fireplace {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+header a {
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 10px;
+}
+
+h1 {
+    margin: 0;
+    border-bottom: 1px dotted grey;
+    font-family: Open Sans Condensed, sans-serif;
+    font-weight: normal;
+    font-size: 24pt;
+    color: white;
+}
+
+h2 {
+    margin: 0;
+    font-family: Open Sans Condensed, sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    color: #069;
+    margin-bottom: 0;
+}
+
+h2 ~ p {    /* only applies to p-elements on the main page */
+    margin: 0;
+    position: relative;
+    top: -40px;     /* move person names to line up with the day number */
+    left: 50px;     /* make sure the person names don't overlap the day number */
+}
+form p {
+    margin: 5px 0;
+} 
+
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+form input[type=submit]:only-child {
+    margin-left: 100px;     /* place submit button underneath fields */
+}
+
+p:last-of-type {    /* the last p-element should act like a normal paragraph since it's not a person name */
+    position: static;
+}
+p:last-of-type a {  /* the add link */
+    color: blue;
+    
+    display: block;     /* we can't center the parent element, because no all pages need their last paragraph centered */
+    text-align: center;
+    margin-bottom: 20px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a + a {     /* delete links */
+    color: red;
+    font-size: 80%;
+    vertical-align: super;
+}
+
